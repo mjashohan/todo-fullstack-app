@@ -1,9 +1,12 @@
 import React from "react";
+import './TodoApp.css'
 
 export default function FooterComponent() {
     return(
-        <div className="FooterComponent">
-            <hr /> Footer
-        </div>
+        <footer className="footer">
+            <div className="container">
+                Your footer
+            </div>
+        </footer>
     )
 }
