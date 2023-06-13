@@ -19,10 +19,24 @@ export default function LoginComponent() {
         setPassword(event.target.value)
     }
     function handleSubmit() {
+<<<<<<< HEAD
         if(authContext.login(username, password)) {
             navigate(`/welcome/${username}`)
         }
         else {
+=======
+        if(username === 'mjashohan' && password==='sara') {
+            authContext.setAuthenticated(true)
+            console.log('Success')
+            setShowSuccessMessage(true)
+            setShowErrorMessage(false)
+            navigate(`/welcome/${username}`)
+        }
+        else {
+            authContext.setAuthenticated(true)
+            console.log('Failed')
+            setShowSuccessMessage(false)
+>>>>>>> 67aeb01780623f92645fc49d4f05f8c9a9e0d6b4
             setShowErrorMessage(true)
         }
     }
