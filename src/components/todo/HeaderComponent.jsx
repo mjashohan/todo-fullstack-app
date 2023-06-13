@@ -3,20 +3,12 @@ import {Link} from "react-router-dom";
 import {useAuth} from "./security/AuthContext";
 
 export default function HeaderComponent() {
-<<<<<<< HEAD
-=======
-
-//    const authContext = useContext(AuthContext)
->>>>>>> 67aeb01780623f92645fc49d4f05f8c9a9e0d6b4
     const authContext = useAuth()
     const isAuthenticated = authContext.isAuthenticated
 
     function logout() {
-<<<<<<< HEAD
         authContext.logout()
-=======
         authContext.setAuthenticated(false)
->>>>>>> 67aeb01780623f92645fc49d4f05f8c9a9e0d6b4
     }
 
     return(
