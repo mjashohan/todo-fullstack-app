@@ -18,20 +18,11 @@ export default function LoginComponent() {
     function handlePasswordChange(event) {
         setPassword(event.target.value)
     }
-    function handleSubmit() {
-        if (authContext.login(username, password)) {
+    async function handleSubmit() {
+        if (await authContext.login(username, password)) {
             navigate(`/welcome/${username}`)
         } else {
-            if (username === 'mjashohan' && password === 'sara') {
-                authContext.setAuthenticated(true)
-                console.log('Success')
-                setShowErrorMessage(false)
-                navigate(`/welcome/${username}`)
-            } else {
-                authContext.setAuthenticated(true)
-                console.log('Failed')
-                setShowErrorMessage(true)
-            }
+            setShowErrorMessage(true)
         }
     }
     return(
